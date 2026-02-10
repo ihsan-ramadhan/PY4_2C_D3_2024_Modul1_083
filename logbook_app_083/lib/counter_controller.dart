@@ -29,6 +29,7 @@ class CounterController {
   void decrement() {
     if (_counter > 0) {
       _counter -= _step;
+      if (_counter < 0) _counter = 0;
       _addHistory("Mengurang $_step");
     }
   }
